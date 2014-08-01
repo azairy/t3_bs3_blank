@@ -9,7 +9,7 @@ defined('_JEXEC') or die;
 ?>
 
 <!-- MAIN NAVIGATION -->
-<nav id="t3-mainnav" class="wrap navbar navbar-default t3-mainnav" data-spy="affix" data-offset-top="110">
+<nav id="t3-mainnav" class="wrap navbar navbar-default t3-mainnav">
 	<div class="container">
 
 		<!-- Brand and toggle get grouped for better mobile display -->
