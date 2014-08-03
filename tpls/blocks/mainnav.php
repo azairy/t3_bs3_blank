@@ -14,7 +14,7 @@ defined('_JEXEC') or die;
 
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
-		
+			<div class="navbar-brand"><img src="templates/t3_bs3_blank/images/demo/logo-blue.png" alt=""></div>
 			<?php if ($this->getParam('navigation_collapse_enable', 1) && $this->getParam('responsive', 1)) : ?>
 				<?php $this->addScript(T3_URL.'/js/nav-collapse.js'); ?>
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".t3-navbar-collapse">
