@@ -6,15 +6,42 @@
  */
 
 defined('_JEXEC') or die;
-?>
 
+// get params
+$sitename  = $this->params->get('sitename');
+$slogan    = $this->params->get('slogan', '');
+$logotype  = $this->params->get('logotype', 'text');
+$logoimage = $logotype == 'image' ? $this->params->get('logoimage', T3Path::getUrl('images/logo.png', '', true)) : '';
+$logoimgsm = ($logotype == 'image' && $this->params->get('enable_logoimage_sm', 0)) ? $this->params->get('logoimage_sm', T3Path::getUrl('images/logo-sm.png', '', true)) : false;
+
+if (!$sitename) {
+	$sitename = JFactory::getConfig()->get('sitename');
+}
+
+$logosize = 'col-sm-12';
+if ($headright = $this->countModules('head-search or languageswitcherload')) {
+	$logosize = 'col-sm-8';
+}
+?>
+<div style="height:50px;">&nbsp;</div>
 <!-- MAIN NAVIGATION -->
-<nav id="t3-mainnav" class="wrap navbar navbar-default t3-mainnav" data-spy="affix" data-offset-top="110">
+<nav id="t3-mainnav" class="wrap navbar navbar-default1 t3-mainnav" data-spy="affix" data-offset-top="50">
 	<div class="container">
 
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
-			<div class="navbar-brand"><img src="templates/t3_bs3_blank/images/demo/logo-blue.png" alt=""></div>
+			<div class="navbar-brand">
+
+				<a href="<?php echo JURI::base(true) ?>" title="<?php echo strip_tags($sitename) ?>">
+					<?php if($logotype == 'image'): ?>
+						<img class="logo-img" src="<?php echo JURI::base(true) . '/' . $logoimage ?>" alt="<?php echo strip_tags($sitename) ?>" />
+					<?php endif ?>
+					<?php if($logoimgsm) : ?>
+						<img class="logo-img-sm" src="<?php echo JURI::base(true) . '/' . $logoimgsm ?>" alt="<?php echo strip_tags($sitename) ?>" />
+					<?php endif ?>
+				</a>
+
+			</div>
 			<?php if ($this->getParam('navigation_collapse_enable', 1) && $this->getParam('responsive', 1)) : ?>
 				<?php $this->addScript(T3_URL.'/js/nav-collapse.js'); ?>
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".t3-navbar-collapse">

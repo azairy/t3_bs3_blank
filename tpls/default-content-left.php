@@ -29,7 +29,7 @@ defined('_JEXEC') or die;
 
 <div class="t3-wrapper"> <!-- Need this wrapper for off-canvas menu. Remove if you don't use of-canvas -->
 
-  <?php $this->loadBlock('header') ?>
+  <?php //$this->loadBlock('header') ?>
 
   <?php $this->loadBlock('mainnav') ?>
 
