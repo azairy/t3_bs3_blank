@@ -23,9 +23,8 @@ if ($headright = $this->countModules('head-search or languageswitcherload')) {
 	$logosize = 'col-sm-8';
 }
 ?>
-<div style="height:50px;">&nbsp;</div>
 <!-- MAIN NAVIGATION -->
-<nav id="t3-mainnav" class="wrap navbar navbar-default1 t3-mainnav" data-spy="affix" data-offset-top="50">
+<nav id="t3-mainnav" class="wrap navbar navbar-default1 t3-mainnav margtop" data-spy="affix" data-offset-top="70">
 	<div class="container">
 
 		<!-- Brand and toggle get grouped for better mobile display -->

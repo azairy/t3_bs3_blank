@@ -4,16 +4,20 @@
   margin-right: auto;
   width: 100%;
   z-index: 10000;
+  background-color: #FFF;
+  border-bottom: 1px solid #CCC;
+  background: rgba(255, 255, 255, 0.9);
 }
-.affix.navbar-brand {
-  padding: 30px 15px;
+.affix .logo-img {
+  height: 45px;
+  margin-top: 10px;
 }
 .navbar-brand {
   float: left;
-  padding: 0px 15px;
+  padding: 3px 15px;
   font-size: 18px;
   line-height: 20px;
-  height: 50px;
+  height: 70px;
 }
 .navbar-brand:hover,
 .navbar-brand:focus {

@@ -7,13 +7,13 @@
 
 defined('_JEXEC') or die;
 ?>
-
+<!--div  style="position: relative; top: -125px; z-index:-1;" -->
 <div class="home">
 
 	<?php if ($this->countModules('home-1')) : ?>
 		<!-- HOME SL 1 -->
 		<div class="wrap t3-sl t3-sl-1 <?php $this->_c('home-1') ?>">
-			<div class="container">
+			<div class="no-container">
 				<jdoc:include type="modules" name="<?php $this->_p('home-1') ?>" style="raw" />
 			</div>
 		</div>
@@ -61,3 +61,4 @@ defined('_JEXEC') or die;
 	<?php endif ?>
 
 </div>
+<!--/div -->

@@ -1,7 +1,7 @@
 
 
 .affix {
-top: 0px;
+top: -70px;
 margin-left: auto;
 margin-right: auto;
 width: 100%;
@@ -21,17 +21,7 @@ background: rgba(255, 255, 255, 0.9);
   padding: (@navbar-padding-vertical - 22) @navbar-padding-horizontal;
   font-size: @font-size-large;
   line-height: @line-height-computed;
-  height: @navbar-height;
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
+  height: @navbar-height/2;
   }
 
-  @media (min-width: @grid-float-breakpoint) {
-    .navbar > .container &,
-    .navbar > .container-fluid & {
-      margin-left: -@navbar-padding-horizontal;
-    }
-  }
-}
+ .margtop{margin-top:70px;}
