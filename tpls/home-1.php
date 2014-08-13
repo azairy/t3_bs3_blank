@@ -31,9 +31,9 @@ defined('_JEXEC') or die;
 
 	<?php //$this->loadBlock('header') ?>
 
-	<?php $this->loadBlock('mainnav') ?>
-
 	<?php $this->loadBlock('mainbody-home-1') ?>
+
+	<div class="overlay_menu"><?php $this->loadBlock('mainnav') ?></div>
 
 	<?php $this->loadBlock('footer') ?>
 
